@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.3 '
+    id 'io.spring.dependency-management' version '1.0.12.RELEASE'
+    id 'groovy'
+}
+
+group = 'com.shx'
+version = '1.0-SNAPSHOT'
+sourceCompatibility='17'
+
+repositories {
+    mavenLocal()
+    maven {
+        name "Alibaba"
+        allowInsecureProtocol = true  // 允许http访问
+        url "https://maven.aliyun.com/repository/public" }
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}

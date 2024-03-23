@@ -1,0 +1,6 @@
+server:
+  port: 7789 # 端口
+
+spring:
+  application:
+    name: arhTool # 应用名称
